@@ -1,0 +1,23 @@
+{% load static%}
+
+<html>
+    <head>
+        <meta charset="urf-8">
+        <link rel="stylesheet" href="{% static 'mystyle.css'%}">
+        <title> Portal Biblioteca - Livros </title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="/"> PRINCIPAL</a>
+            <a href="/livros">LIVROS"</a>
+        </div>
+        <div class="mycard">
+            <h1> Livros</h1>
+            <ul>
+            {% for l in livros %}
+            <li> {{l.nome}} | {{l.autor}} | {{l.ano}}</li>
+            {% endfor %}
+        </ul>
+       </div>
+    </body>
+</html>
